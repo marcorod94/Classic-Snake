@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Main">
+      <UniqueIdentifier>{8493e7a2-1c1c-4253-9aa0-5f46ec20bfb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{51aed965-3541-4266-978c-5115395cbdb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module">
+      <UniqueIdentifier>{46002e5c-c188-41ac-ada7-1609ac5357ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{d289f617-7e9e-47e1-8aa0-097a10505418}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Main\Main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Module\ModuleWindow.cpp">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Main\Application.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Module\ModuleRender.cpp">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utils\Log.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Module\ModuleInput.cpp">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Module\ModuleAudio.cpp">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Module\ModuleTexture.cpp">
+      <Filter>Module</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Module\Module.h">
+      <Filter>Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Module\ModuleWindow.h">
+      <Filter>Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Main\Application.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Main\Globals.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Module\ModuleRender.h">
+      <Filter>Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Module\ModuleInput.h">
+      <Filter>Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Module\ModuleAudio.h">
+      <Filter>Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Module\ModuleTexture.h">
+      <Filter>Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Animation.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Collision.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
