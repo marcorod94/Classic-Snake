@@ -97,7 +97,7 @@ bool ModuleRender::Blit(SDL_Texture* texture, SDL_FRect* renderSection, SDL_Rect
 }
 
 
-bool ModuleRender::Blit(SDL_Texture* texture, SDL_FRect* renderSection, SDL_Rect* sourceSection, float rotationAngle)
+bool ModuleRender::Blit(SDL_Texture* texture, SDL_FRect* renderSection, float rotationAngle, SDL_Rect* sourceSection)
 {
 	bool ret = true;
 	SDL_RendererFlip flip = SDL_FLIP_NONE;

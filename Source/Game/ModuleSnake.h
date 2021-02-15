@@ -6,6 +6,7 @@
 struct SDL_FRect;
 struct SDL_Rect;
 struct SDL_Texture;
+struct RenderObject;
 
 constexpr int SNAKE_WIDTH = 30;
 constexpr float DELTA_ANGLE = 90.f;
@@ -17,12 +18,7 @@ enum class Direction
 	RIGHT
 };
 
-struct RenderObject
-{
-	SDL_Texture* texture = nullptr;
-	SDL_FRect renderSection;
-	SDL_Rect sourceSection;
-};
+
 
 class ModuleSnake : public Module
 {
@@ -34,6 +30,7 @@ public:
 	UpdateStatus Update() override;
 	UpdateStatus PostUpdate() override;
 	bool CleanUp() override;
+	bool CheckCollision();
 
 	float speed = 0.5f;
 	Uint32 startTime = 0;

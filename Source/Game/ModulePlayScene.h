@@ -3,6 +3,8 @@
 
 #include "Module/Module.h"
 
+struct RenderObject;
+
 class ModulePlayScene : public Module
 {
 public:
@@ -13,5 +15,7 @@ public:
 	UpdateStatus Update() override;
 	UpdateStatus PostUpdate() override;
 	bool CleanUp() override;
+	std::vector<RenderObject*> frame;
+	
 };
 #endif

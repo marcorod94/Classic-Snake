@@ -5,7 +5,15 @@
 
 struct SDL_FRect;
 struct SDL_Renderer;
+struct SDL_Rect;
 struct SDL_Texture;
+
+struct RenderObject
+{
+	SDL_Texture* texture = nullptr;
+	SDL_FRect renderSection;
+	SDL_Rect sourceSection;
+};
 
 class ModuleRender : public Module
 {
@@ -23,6 +31,6 @@ public:
 	bool CleanUp() override;
 
 	bool Blit(SDL_Texture* texture, SDL_FRect* renderSection, SDL_Rect* sourceSection = nullptr);
-	bool Blit(SDL_Texture* texture, SDL_FRect* renderSection, SDL_Rect* sourceSection = nullptr, float rotationAngle = 0.0F);
+	bool Blit(SDL_Texture* texture, SDL_FRect* renderSection, float rotationAngle, SDL_Rect* sourceSection = nullptr);
 };
 #endif
