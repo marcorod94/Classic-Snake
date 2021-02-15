@@ -95,3 +95,24 @@ bool ModuleRender::Blit(SDL_Texture* texture, SDL_FRect* renderSection, SDL_Rect
 	}
 	return ret;
 }
+
+
+bool ModuleRender::Blit(SDL_Texture* texture, SDL_FRect* renderSection, SDL_Rect* sourceSection, float rotationAngle)
+{
+	bool ret = true;
+	SDL_RendererFlip flip = SDL_FLIP_NONE;
+	if (rotationAngle != 0)
+	{
+		flip = SDL_FLIP_HORIZONTAL;
+	}
+	if (rotationAngle == 180)
+	{
+		flip = SDL_FLIP_VERTICAL;
+	}
+	if (SDL_RenderCopyExF(renderer, texture, sourceSection, renderSection, rotationAngle, nullptr, flip) != 0)
+	{
+		LOG("Cannot blit to screen. SDL_RenderCopy error: %s", SDL_GetError());
+		ret = false;
+	}
+	return ret;
+}

@@ -13,6 +13,9 @@
     <Filter Include="Utils">
       <UniqueIdentifier>{d289f617-7e9e-47e1-8aa0-097a10505418}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{098cc515-9f94-4679-b447-baf06abf3ae3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Main\Main.cpp">
@@ -38,6 +41,12 @@
     </ClCompile>
     <ClCompile Include="Source\Module\ModuleTexture.cpp">
       <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\ModulePlayScene.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\ModuleSnake.cpp">
+      <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +79,12 @@
     </ClInclude>
     <ClInclude Include="Source\Utils\Collision.h">
       <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\ModulePlayScene.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\ModuleSnake.h">
+      <Filter>Game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

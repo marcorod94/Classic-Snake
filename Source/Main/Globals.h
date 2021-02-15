@@ -20,9 +20,9 @@ enum class UpdateStatus
 };
 
 constexpr bool VSYNC = true;
-constexpr int SCREEN_WIDTH = 480;
+constexpr int SCREEN_WIDTH = 1080;
 constexpr int SCREEN_HEIGHT = 720;
 constexpr bool FULLSCREEN = false;
 constexpr bool RESIZABLE = true;
-constexpr const char* TITLE = "GameTemplate";
+constexpr const char* TITLE = "Classic Snake";
 #endif

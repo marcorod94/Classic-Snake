@@ -162,6 +162,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Game\ModulePlayScene.cpp" />
+    <ClCompile Include="Source\Game\ModuleSnake.cpp" />
     <ClCompile Include="Source\Main\Application.cpp" />
     <ClCompile Include="Source\Main\Main.cpp" />
     <ClCompile Include="Source\Module\ModuleAudio.cpp" />
@@ -172,6 +174,8 @@
     <ClCompile Include="Source\Utils\Log.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Game\ModulePlayScene.h" />
+    <ClInclude Include="Source\Game\ModuleSnake.h" />
     <ClInclude Include="Source\Main\Application.h" />
     <ClInclude Include="Source\Main\Globals.h" />
     <ClInclude Include="Source\Module\Module.h" />

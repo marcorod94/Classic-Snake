@@ -1,5 +1,7 @@
 #include "Application.h"
 #include "Main/Globals.h"
+#include "Game/ModulePlayScene.h"
+#include "Game/ModuleSnake.h"
 #include "Module/Module.h"
 #include "Module/ModuleAudio.h"
 #include "Module/ModuleInput.h"
@@ -16,6 +18,8 @@ Application::Application()
 	modules.push_back(audio = new ModuleAudio());
 
 	// Game
+	modules.push_back(snake = new ModuleSnake(false));
+	modules.push_back(playScene = new ModulePlayScene());
 }
 
 Application::~Application()

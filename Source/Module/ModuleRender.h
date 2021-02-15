@@ -23,5 +23,6 @@ public:
 	bool CleanUp() override;
 
 	bool Blit(SDL_Texture* texture, SDL_FRect* renderSection, SDL_Rect* sourceSection = nullptr);
+	bool Blit(SDL_Texture* texture, SDL_FRect* renderSection, SDL_Rect* sourceSection = nullptr, float rotationAngle = 0.0F);
 };
 #endif

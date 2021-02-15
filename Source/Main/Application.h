@@ -6,7 +6,9 @@
 class Module;
 class ModuleAudio;
 class ModuleInput;
+class ModulePlayScene;
 class ModuleRender;
+class ModuleSnake;
 class ModuleTexture;
 class ModuleWindow;
 enum class UpdateStatus;
@@ -18,6 +20,9 @@ public:
 	ModuleRender* renderer = nullptr;
 	ModuleTexture* texture = nullptr;
 	ModuleAudio* audio = nullptr;
+
+	ModulePlayScene* playScene = nullptr;
+	ModuleSnake* snake = nullptr;
 
 	Application();
 	~Application();
