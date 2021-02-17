@@ -3,6 +3,7 @@
 #include "ModuleTexture.h"
 #include "SDL.h"
 #include "SDL_image.h"
+#include "SDL_ttf.h"
 
 ModuleTexture::~ModuleTexture()
 {
@@ -12,7 +13,7 @@ ModuleTexture::~ModuleTexture()
 bool ModuleTexture::Init()
 {
 	LOG("Init Image library");
-	bool ret = true;
+	bool success = true;
 
 	// load support for the PNG image format
 	int flags = IMG_INIT_PNG;
@@ -21,10 +22,25 @@ bool ModuleTexture::Init()
 	if ((init & flags) != flags)
 	{
 		LOG("Could not initialize Image lib. IMG_Init: %s", IMG_GetError());
-		ret = false;
+		success = false;
 	}
 
-	return ret;
+	LOG("Init Font library");
+	if (TTF_Init() == -1)
+	{
+		LOG("Could not initialize Font lib. SDL_ttf Error: %s", TTF_GetError());
+		success = false;
+	}
+	else
+	{
+		font = TTF_OpenFont("Assets/Font/8-BIT WONDER.TTF", 50);
+		if (font == nullptr)
+		{
+			LOG("Failed to load font! SDL_ttf Error: %s\n", TTF_GetError());
+			success = false;
+		}
+	}
+	return success;
 }
 
 bool ModuleTexture::CleanUp()
@@ -36,6 +52,8 @@ bool ModuleTexture::CleanUp()
 		SDL_DestroyTexture((*iterator).second);
 	}
 	textures.clear();
+	TTF_CloseFont(font);
+	font = nullptr;
 	return true;
 }
 
@@ -50,8 +68,6 @@ SDL_Texture* ModuleTexture::Load(const char* path)
 	SDL_Texture* texture = nullptr;
 	SDL_Surface* surface = LoadSurface(path);
 
-
-
 	if (surface)
 	{
 		texture = SDL_CreateTextureFromSurface(App->renderer->renderer, surface);
@@ -62,6 +78,43 @@ SDL_Texture* ModuleTexture::Load(const char* path)
 		else
 		{
 			textures.emplace(std::make_pair(path, texture));
+		}
+
+		SDL_FreeSurface(surface);
+	}
+
+	return texture;
+}
+
+
+SDL_Texture* ModuleTexture::LoadText(const char* text, const float3* color)
+{
+	auto iterator = textures.find(text);
+	if (iterator != textures.end())
+	{
+		return (*iterator).second;
+	}
+
+	SDL_Texture* texture = nullptr;
+	SDL_Color textColor = { 0, 0, 0 };
+	if (color)
+	{
+		textColor = { static_cast<Uint8>(color->x),
+						static_cast<Uint8>(color->y),
+						static_cast<Uint8>(color->z)};
+	}
+	SDL_Surface* surface = TTF_RenderText_Solid(font, text, textColor);
+
+	if (surface)
+	{
+		texture = SDL_CreateTextureFromSurface(App->renderer->renderer, surface);
+		if (texture == nullptr)
+		{
+			LOG("Unable to create texture from surface! SDL Error: %s\n", SDL_GetError());
+		}
+		else
+		{
+			textures.emplace(std::make_pair(text, texture));
 		}
 
 		SDL_FreeSurface(surface);
