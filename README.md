@@ -2,50 +2,38 @@
 This is an approach on the classic snake game made using **C++** and **SDL**.
 <br/>
 ## Media
-<table>
-    <tr style="border: 0px">
-        <td align="center">
-            <a href="https://github.com/marcorod94">
-                <img src="https://raw.githubusercontent.com/marcorod94/flappyDemo/master/media/demo.gif" style="width:33vw" alt=""/>
+<p align="center">
+    <table>
+        <tr>
+            <td align="center">
+                <img src="https://raw.githubusercontent.com/marcorod94/Classic-Snake/master/Media/menu.png" width="200" alt=""/>
                 <br/>
-            </a>
-        </td>
-        <td align="center">
-            <a href="https://github.com/marcorod94">
-                <img src="https://raw.githubusercontent.com/marcorod94/flappyDemo/master/media/demo.gif" style="width:33vw" alt=""/>
+            </td>
+            <td align="center" colspan="3" style="border: 0px">
+                <img src="https://raw.githubusercontent.com/marcorod94/Classic-Snake/master/Media/play.png" width="200" alt=""/>
                 <br/>
-            </a>
-        </td>
-        <td align="center">
-            <a href="https://github.com/marcorod94">
-                <img src="https://raw.githubusercontent.com/marcorod94/flappyDemo/master/media/demo.gif" style="width:33vw" alt=""/>
+            </td>
+            <td align="center">
+                <img src="https://raw.githubusercontent.com/marcorod94/Classic-Snake/master/Media/gameover.png" width="200" alt=""/>
                 <br/>
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td align="center" colspan="3" style="border: 0px">
-            <a href="https://github.com/marcorod94">
-                <img src="https://raw.githubusercontent.com/marcorod94/flappyDemo/master/media/demo.gif" style="width:33vw" alt=""/>
-                <br/>
-            </a>
-        </td>
-    </tr>
-</table>
+            </td>
+        </tr>
+    </table>
+<p>
 
 <br/>
 
 ## Author
 <br/>
-<div style="margin-left: 40%; width: 50%;">
-    <a href="https://github.com/marcorod94">
-        <img src="https://avatars2.githubusercontent.com/u/29025282?v=4" style="width:100px; border-radius: 50%;" alt=""/>
+<p align="center">
+  <a href="https://github.com/marcorod94">
+        <img src="https://avatars2.githubusercontent.com/u/29025282?v=4" width="150" alt=""/>
         <br/>
         <sub>
             <b>Marco Rodríguez</b>
         </sub>
     </a>
-</div>
+</p>
 <br/>
 I’m an enthusiastic developer from Ecuador.
 Since I can remember I have always enjoyed playing video games in my spare time and this led me to pursue a career in the video game Industry.
