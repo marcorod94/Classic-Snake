@@ -100,7 +100,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <AdditionalLibraryDirectories>./Library/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>MathGeoLibDebug.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>MathGeoLibDebug.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -119,7 +119,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>MathGeoLib.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>MathGeoLib.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>./Library/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -163,7 +163,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source\Game\ModulePlayScene.cpp" />
+    <ClCompile Include="Source\Game\ModuleScore.cpp" />
     <ClCompile Include="Source\Game\ModuleSnake.cpp" />
+    <ClCompile Include="Source\Game\ModuleUI.cpp" />
     <ClCompile Include="Source\Main\Application.cpp" />
     <ClCompile Include="Source\Main\Main.cpp" />
     <ClCompile Include="Source\Module\ModuleAudio.cpp" />
@@ -174,6 +176,9 @@
     <ClCompile Include="Source\Utils\Log.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Game\ModuleScore.h" />
+    <ClInclude Include="Source\Game\ModuleUI.h" />
+    <ClInclude Include="Source\Utils\RandomGenerator.h" />
     <ClInclude Include="Source\Game\ModulePlayScene.h" />
     <ClInclude Include="Source\Game\ModuleSnake.h" />
     <ClInclude Include="Source\Main\Application.h" />

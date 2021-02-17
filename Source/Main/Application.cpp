@@ -1,7 +1,9 @@
 #include "Application.h"
 #include "Main/Globals.h"
 #include "Game/ModulePlayScene.h"
+#include "Game/ModuleScore.h"
 #include "Game/ModuleSnake.h"
+#include "Game/ModuleUI.h"
 #include "Module/Module.h"
 #include "Module/ModuleAudio.h"
 #include "Module/ModuleInput.h"
@@ -19,6 +21,8 @@ Application::Application()
 
 	// Game
 	modules.push_back(snake = new ModuleSnake(false));
+	modules.push_back(score = new ModuleScore(false));
+	modules.push_back(ui = new ModuleUI(false));
 	modules.push_back(playScene = new ModulePlayScene());
 }
 
@@ -76,7 +80,10 @@ bool Application::CleanUp() const {
 	bool value = true;
 	for (auto iterator = modules.begin(); iterator != modules.end(); ++iterator)
 	{
-		value = (*iterator)->CleanUp();
+		if ((*iterator)->IsEnabled())
+		{
+			value = (*iterator)->CleanUp();
+		}
 	}
 	return value;
 }

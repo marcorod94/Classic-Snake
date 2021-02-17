@@ -16,6 +16,7 @@ public:
 	UpdateStatus PostUpdate() override;
 	bool CleanUp() override;
 	std::vector<RenderObject*> frame;
+	RenderObject* text = nullptr;
 	
 };
 #endif

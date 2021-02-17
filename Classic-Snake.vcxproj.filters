@@ -48,6 +48,8 @@
     <ClCompile Include="Source\Game\ModuleSnake.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Game\ModuleUI.cpp" />
+    <ClCompile Include="Source\Game\ModuleScore.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Module\Module.h">
@@ -86,5 +88,10 @@
     <ClInclude Include="Source\Game\ModuleSnake.h">
       <Filter>Game</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Utils\RandomGenerator.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\ModuleUI.h" />
+    <ClInclude Include="Source\Game\ModuleScore.h" />
   </ItemGroup>
 </Project>

@@ -8,8 +8,10 @@ class ModuleAudio;
 class ModuleInput;
 class ModulePlayScene;
 class ModuleRender;
+class ModuleScore;
 class ModuleSnake;
 class ModuleTexture;
+class ModuleUI;
 class ModuleWindow;
 enum class UpdateStatus;
 
@@ -23,6 +25,8 @@ public:
 
 	ModulePlayScene* playScene = nullptr;
 	ModuleSnake* snake = nullptr;
+	ModuleScore* score = nullptr;
+	ModuleUI* ui = nullptr;
 
 	Application();
 	~Application();
